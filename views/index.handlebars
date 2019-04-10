@@ -1,7 +1,8 @@
+<h1>Food awaiting their ultimate destiny to be devoured!</h1>
 <ul>
   {{#each devour}}
     {{#unless devoured}}
-      {{> devour}}
+      {{> devour/devour-block}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -9,9 +10,28 @@
 <h2>Food that has been devoured!</h2>
 
 <ul>
-  {{#each cats}}
+  {{#each devour}}
     {{#if devoured}}
-      {{> devour}}
+      {{> devour/devour-block}}
     {{/if}}
   {{/each}}
 </ul>
+
+<h2>Add a Food to be Devoured</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="food">Food Name:</label>
+    <input type="text" id="food" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Has it been devoured yet?</label>
+    <br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!
+    <br>
+    <input type="radio" name="devoured" value="0"> Still available!
+  </div>
+
+  <button type="submit">Add Food!</button>
+</form>
