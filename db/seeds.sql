@@ -1,0 +1,10 @@
+INSERT INTO devour (food, devoured) VALUES ("STEAK", TRUE);
+INSERT INTO devour (food, devoured) VALUES ("RAMEN", TRUE);
+INSERT INTO devour (food, devoured) VALUES ("RICE", TRUE);
+INSERT INTO devour (food, devoured) VALUES ("BULGOGI", TRUE);
+INSERT INTO devour (food, devoured) VALUES ("POKE BOWL", TRUE);
+INSERT INTO devour (food, devoured) VALUES ("SUSHI", FALSE);
+INSERT INTO devour (food, devoured) VALUES ("BOTTLE OF RED WINE", FALSE);
+INSERT INTO devour (food, devoured) VALUES ("CURRY", FALSE);
+INSERT INTO devour (food, devoured) VALUES ("OATMEAL", FALSE);
+INSERT INTO devour (food, devoured) VALUES ("PORK CHOP", FALSE);

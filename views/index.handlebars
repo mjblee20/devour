@@ -1,0 +1,17 @@
+<ul>
+  {{#each devour}}
+    {{#unless devoured}}
+      {{> devour}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Food that has been devoured!</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if devoured}}
+      {{> devour}}
+    {{/if}}
+  {{/each}}
+</ul>
