@@ -2,13 +2,12 @@
 $(function() {
     $(".devour").on("click", function(event) {
         var id = $(this).data("id");
-        var devoured = $(this).data("devoured");
-        
+        var devoured = $(this).data("devour");
+        console.log("client side", devoured);
         var newDevoured = {
             devoured: devoured
         };
 
-        console.log("udpate boo", newDevoured);
         // Send the PUT request.
         $.ajax("/api/devour/" + id, {
             type: "PUT",

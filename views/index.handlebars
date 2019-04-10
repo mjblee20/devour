@@ -1,8 +1,12 @@
 <h1>Food awaiting their ultimate destiny to be devoured!</h1>
 <ul>
+  {{!-- iterate through table --}}
   {{#each devour}}
-    {{#unless devoured}}
-      {{> devour/devour-block}}
+    {{!-- devoured is false then proceed--}}
+    {{#unless devoured}} 
+      {{!-- implements code in devour-block.handlebars --}}
+      {{!-- canEat must be opposite of devoured --}}
+      {{> devour/devour-block canEat=1}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -11,8 +15,9 @@
 
 <ul>
   {{#each devour}}
+    {{!-- devoured is true then proceed --}}
     {{#if devoured}}
-      {{> devour/devour-block}}
+      {{> devour/devour-block canEat=0}}
     {{/if}}
   {{/each}}
 </ul>
