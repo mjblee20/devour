@@ -7,7 +7,7 @@ $(function() {
         var newDevoured = {
             devoured: devoured
         };
-
+        
         // Send the PUT request.
         $.ajax("/api/devour/" + id, {
             type: "PUT",

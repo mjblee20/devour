@@ -1,7 +1,7 @@
-<li>
-	{{food}}
+<li class="items m-4 text-center">
+	<h3>{{food}}</h3>
 
-	<button class="devour" data-id="{{id}}" data-devour={{canEat}}>
+	<button class="devour btn-danger btn" data-id="{{id}}" data-devour={{canEat}}>
 		{{#if canEat}}DEVOUR IT!
 			{{else}}Buy More!
 		{{/if}}
