@@ -5,6 +5,7 @@
 }
 .group {
     height: 80px;
+    width:80%;
 }
 #foodItem {
     width: 200px;
