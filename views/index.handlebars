@@ -1,38 +1,6 @@
-<div class="row justify-content-around m-5">
-  <div class="col-5 jumbotron">
-    <div class="row text-center p-3 m-2">
-      <h2>Food awaiting their ultimate destiny to be devoured!</h2>
-    </div>
-
-    <ul style="list-style: none;">
-      {{!-- iterate through table --}}
-      {{#each devour}}
-        {{!-- devoured is false then proceed--}}
-        {{#unless devoured}} 
-          {{!-- implements code in devour-block.handlebars --}}
-          {{!-- canEat must be opposite of devoured --}}
-          {{> devour/devour-block canEat=1}}
-        {{/unless}}
-      {{/each}}
-    </ul>
-  </div>
-  <div class="col-5 jumbotron">
-    <div class="row text-center p-3 m-2">
-      <h2>Food that has been devoured!</h2>
-    </div>
-    
-    <ul style="list-style: none;">
-      {{#each devour}}
-        {{!-- devoured is true then proceed --}}
-        {{#if devoured}}
-          {{> devour/devour-block canEat=0}}
-        {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="jumbotron">
-    <h2>Add a Food to be Devoured</h2>
+<div class="row justify-content-around m-5 display-relative">
+  <div class="col-12 jumbotron text-center">
+    <h1>Add a Food to be Devoured</h1>
     <form class="create-form">
 
       <div class="form-group">
@@ -50,6 +18,38 @@
 
       <button type="submit">Add Food!</button>
     </form>
+  </div>
+  
+  <div class="col-5 jumbotron text-center">
+    <div class="row text-center p-4 m-1">
+      <h4 class="group">Food awaiting their ultimate destiny to be devoured!</h4 class="group">
+    </div>
+
+    <ul style="list-style: none; display: inline-block;" class="display-relative justify-content-center m-1 p-2 text-center align-items-center flex-wrap">
+      {{!-- iterate through table --}}
+      {{#each devour}}
+        {{!-- devoured is false then proceed--}}
+        {{#unless devoured}} 
+          {{!-- implements code in devour-block.handlebars --}}
+          {{!-- canEat must be opposite of devoured --}}
+          {{> devour/devour-block canEat=1}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-5 jumbotron text-center">
+    <div class="row text-center p-4 m-1">
+      <h4 class="group">Food that has been devoured!</h4>
+    </div>
+    
+  <ul style="list-style: none; display: inline-block;" class="display-relative justify-content-center m-1 p-2 text-center align-items-center flex-wrap"> 
+      {{#each devour}}
+        {{!-- devoured is true then proceed --}}
+        {{#if devoured}}
+          {{> devour/devour-block canEat=0}}
+        {{/if}}
+      {{/each}}
+    </ul>
   </div>
 </div>
 

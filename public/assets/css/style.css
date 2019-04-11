@@ -1,4 +1,11 @@
 .items {
-    background: (200,200,200,0.6);
-    margin: 30px;
+    background: rgb(50, 155, 155, 0.4);
+    border-radius: 10px;
+    width:90%;
+}
+.group {
+    height: 80px;
+}
+#foodItem {
+    width: 200px;
 }
